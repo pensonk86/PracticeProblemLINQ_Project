@@ -10,43 +10,28 @@ namespace PracticeProblemsLINQ
     {
         //Weighted project points: /10
         //Project points: /25
-       
+
         #region Problem 1 
         //(5 points) Problem 1
         //Using LINQ, write a method that takes in a list of strings and returns all words that contain the substring “th” from a list.
-        public static List<string> RunProblem1(List<string> words)
+        public static void WordsThatStartWithTh(List<string> wordString)
         {
-            //code
-
-            //return
-
-        }
-        #endregion
-
-       public static void WordsThatStartWithTh(List<string> wordString)
-       {
             var words = wordString;
             var thWords = words.Where(w => w.Contains("th"));
-            foreach ( var word in thWords)
+            foreach (var word in thWords)
             {
                 Console.WriteLine(word);
 
             }
             Console.ReadLine();
-       }
+        }
+        #endregion
+
+
 
         #region Problem 2 
         //(5 points) Problem 2
         //Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
-        public static List<string> RunProblem2(List<string> names)
-        {
-            //code
-
-            //return
-
-        }
-        #endregion
-
         public static void WordsWithRemovedDuplicates(List<string> names)
         {
             var words = names;
@@ -60,24 +45,37 @@ namespace PracticeProblemsLINQ
 
 
         }
+        #endregion
+
+
 
         #region Problem 3
         //(5 points) Problem 3
         //Using LINQ, write a method that takes in a list of customers and returns the lone customer who has the name of Mike. 
-        public static Customer RunProblem3(List<Customer> customers)
+        public static void ReturnCustomerName(List<string> customers)
         {
-            //code
+            var names = customers;
+            var mike = names.Where(n => n.Contains("Mike"));
+            foreach (var word in names)
+            {
+                Console.WriteLine(names);
 
-            //return
+
+            }
+            Console.ReadLine();
 
         }
         #endregion
+
+        
+
+
 
         #region Problem 4
         //(5 points) Problem 4
         //Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
         //Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
-        public static Customer RunProblem4(List<Customer> customers)
+        public static void Customer RunProblem4(List<Customer> customers)
         {
             //code
 
