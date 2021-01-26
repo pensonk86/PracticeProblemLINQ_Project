@@ -39,7 +39,7 @@ namespace PracticeProblemsLINQ
             foreach (var word in removeWords)
             {
                 Console.WriteLine(word);
-
+                
             }
             Console.ReadLine();
 
@@ -58,7 +58,7 @@ namespace PracticeProblemsLINQ
             var mike = names.Where(n => n.Contains("Mike"));
             foreach (var word in names)
             {
-                Console.WriteLine(names);
+                Console.WriteLine(word);
 
 
             }
@@ -75,11 +75,18 @@ namespace PracticeProblemsLINQ
         //(5 points) Problem 4
         //Using LINQ, write a method that takes in a list of customers and returns the customer who has an id of 3. 
         //Then, update that customer's first name and last name to completely different names and return the newly updated customer from the method.
-        public static void Customer RunProblem4(List<Customer> customers)
+        public static Customer ReturnCustomerID(List<Customer> customers)
         {
-            //code
+           
+            var personFromList = customers.Where(c => c.Id == 3).Single();
+            personFromList.FirstName = "James";
+            personFromList.LastName = "Patrick";
 
-            //return
+            return personFromList;
+
+
+            
+
 
         }
         #endregion
@@ -90,11 +97,10 @@ namespace PracticeProblemsLINQ
         //The method should take in a list of strings of grades (e.g., one string might be "90,100,82,89,55"), 
         //drops the lowest grade from each string, averages the rest of the grades from that string, then averages the averages.
         //Expected output: 86.125
-        public static double RunProblem5(List<string> classGrades)
+        public static void ClassGradeAverage(List<string> classGrades)
         {
-            //code
+            
 
-            //return
 
         }
         #endregion
