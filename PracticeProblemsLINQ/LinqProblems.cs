@@ -23,6 +23,18 @@ namespace PracticeProblemsLINQ
         }
         #endregion
 
+       public static void WordsThatStartWithTh(List<string> wordString)
+       {
+            var words = wordString;
+            var thWords = words.Where(w => w.Contains("th"));
+            foreach ( var word in thWords)
+            {
+                Console.WriteLine(word);
+
+            }
+            Console.ReadLine();
+       }
+
         #region Problem 2 
         //(5 points) Problem 2
         //Using LINQ, write a method that takes in a list of strings and returns a copy of the list without duplicates.
