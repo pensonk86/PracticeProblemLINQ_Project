@@ -47,6 +47,20 @@ namespace PracticeProblemsLINQ
         }
         #endregion
 
+        public static void WordsWithRemovedDuplicates(List<string> names)
+        {
+            var words = names;
+            var removeWords = words.Distinct();
+            foreach (var word in removeWords)
+            {
+                Console.WriteLine(word);
+
+            }
+            Console.ReadLine();
+
+
+        }
+
         #region Problem 3
         //(5 points) Problem 3
         //Using LINQ, write a method that takes in a list of customers and returns the lone customer who has the name of Mike. 
